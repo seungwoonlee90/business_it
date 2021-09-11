@@ -5,6 +5,7 @@ function Navigation() {
 
     return <div>
         <Link to="/"> Home </Link>
+        <Link to="/signin"> SingIn </Link>
     </div>
 }
 
