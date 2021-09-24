@@ -1,0 +1,77 @@
+body {
+    font-family: sans-serif;
+    background: linear-gradient(90deg, #6583a8, #0c7b93);
+    overflow-y: hidden;
+}
+
+.containers {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    padding: 0 8%;
+}
+
+.content {
+    top: 40%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.content h1 span {
+    color: #ff3753;
+}
+
+.content button {
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 12px 25px;
+    color: #fff;
+    display: flex;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.launch-time {
+    display: flex;
+}
+
+.launch-time div {
+    flex-basis: 100px;
+}
+
+.launch-time div p {
+    font-size: 50px;
+    margin-bottom: 1px;
+}
+
+.launch-time div span {
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.rocket {
+    width: 250px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: rocket 4s ease-in infinite;
+}
+
+@keyframes rocket {
+    0% {
+        bottom: -10%;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 120%;
+        opacity: 1;
+    }
+}

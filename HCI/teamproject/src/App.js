@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Navigation from './components/Navigation';
-import SignIn from './components/Signin'
+import Profile from './components/Profile'
+import Landing from './components/Landing';
 
 function App() {
   return (
@@ -9,13 +10,10 @@ function App() {
     <Navigation />
     <Switch>
       <Route exact path="/">
-        <div>
-          <h1>Hi</h1>
-        </div>
-        <footer>&copy; {new Date().getFullYear()} ohdangdang</footer>
+        <Landing />
       </Route>
-      <Route exact path="/signin">
-        <SignIn />
+      <Route exact path="/profile">
+        <Profile />
       </Route>
     </Switch>
   </div>
