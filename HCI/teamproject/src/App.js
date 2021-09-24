@@ -12,6 +12,7 @@ function App() {
         <div>
           <h1>Hi</h1>
         </div>
+        <footer>&copy; {new Date().getFullYear()} ohdangdang</footer>
       </Route>
       <Route exact path="/signin">
         <SignIn />
