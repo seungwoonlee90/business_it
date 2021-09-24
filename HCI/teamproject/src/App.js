@@ -1,16 +1,24 @@
 import React from 'react';
-import { HashRouter, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import SignIn from './components/Signin'
-import Home from './routes/Home';
-
 
 function App() {
-  return <HashRouter>
+  return (
+  <div className="App">
     <Navigation />
-    <Route path="/" exact={true} component={Home}/>
-    <Route path="/signin" component={SignIn}/>
-  </HashRouter>
+    <Switch>
+      <Route exact path="/">
+        <div>
+          <h1>Hi</h1>
+        </div>
+      </Route>
+      <Route exact path="/signin">
+        <SignIn />
+      </Route>
+    </Switch>
+  </div>
+  )
 }
 
 export default App;
