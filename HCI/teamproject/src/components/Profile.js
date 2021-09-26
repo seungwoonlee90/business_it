@@ -1,27 +1,39 @@
 import React from 'react';
-import firebase from "firebase/compat/app";
 import 'firebase/auth';
+import { Form, Button } from 'react-bootstrap';
+// import firebase from "firebase/compat/app";
 
-class Signin extends React.Component {
+function Signin() {
 
-    render() {
+    const Login = async (e) => {
+        e.preventDefault();
+        /// need to edit
+        const email = document.querySelectorAll('Form.Control')[0].value
+        const password = document.querySelectorAll('Form.Control')[1].value
+        console.log(email, password);
+        // await firebase.auth().signInWithEmailAndPassword(email, password)
+        window.location.href = '/'
+    };
 
-        const Login = async (e) => {
-            e.preventDefault();
-            const email = document.getElementById('email').value
-            const password = document.getElementById('password').value
-            await firebase.auth().signInWithEmailAndPassword(email, password)
-            window.location.href = '/'
-        };
+    return (
+        <Form onSubmit = {Login}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Text className="text-muted">
+                We'll never share your email with anyone else.
+                </Form.Text>
+            </Form.Group>
 
-        return(
-        <form onSubmit = {Login}>
-            <input type="text" id="email" placeholder="email" required />
-            <input type="password" id="password" placeholder="password" required />
-            <button id="login">로그인</button>
-        </form>
-        )
-    }
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Password" />
+            </Form.Group>
+            <Button variant="primary" type="submit">
+                Submit
+            </Button>
+            </Form>
+    )
 }
 
 export default Signin;
