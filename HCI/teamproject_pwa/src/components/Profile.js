@@ -1,9 +1,12 @@
 import React from 'react';
 import './Profile.css';
+import SignIn from './SignIn';
 
 function Profile(){
     return (
-        <div className="profileBody">
+        <>
+        <SignIn />
+        {/* <div className="profileBody">
             <article className="profile">
                 <img src="https://doodleipsum.com/600?shape=circle&bg=ceebff" alt="profile"/>
                 <h1>teamproject_admin</h1>
@@ -17,7 +20,8 @@ function Profile(){
             <button onClick={()=>{
                 window.location.href = '/'
             }}>Log out</button>
-        </div>
+        </div> */}
+        </>
     )
 }
 
