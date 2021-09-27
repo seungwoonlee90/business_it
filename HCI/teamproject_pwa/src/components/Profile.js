@@ -14,7 +14,9 @@ function Profile(){
                     <span>admin@gmail.com</span>
                 </li>		
             </ul>
-            <button>Log out</button>
+            <button onClick={()=>{
+                window.location.href = '/'
+            }}>Log out</button>
         </div>
     )
 }

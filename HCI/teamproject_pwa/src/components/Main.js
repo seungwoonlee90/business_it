@@ -8,7 +8,7 @@ function Main() {
             <Container>
                 <Row className="mainImg">
                     <Col>
-                        <Image src="https://firebasestorage.googleapis.com/v0/b/teamproject-4b829.appspot.com/o/%E1%84%88%E1%85%A2%E1%84%85%E1%85%A91.png?alt=media&token=419a94da-fd49-46d0-941d-ae912b0da91c" rounded width="150px"/>
+                        <Image src="https://doodleipsum.com/600?shape=circle&bg=ceebff" rounded width="150px"/>
                     </Col>
                     <Col className="mainDesc">
                         <h4> 🐈‍⬛</h4>
