@@ -1,13 +1,17 @@
 import React from 'react';
 import './App.css';
+import { Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Main from './components/Main';
 
 function App() {
+
   return (
     <div className="App">
       <Navigation />
-      <Main />
+      <Route exact path="/">
+        <Main />
+      </Route>
     </div>
   );
 }
