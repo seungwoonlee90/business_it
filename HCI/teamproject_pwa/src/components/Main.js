@@ -1,8 +1,16 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import './Main.css';
+import auth from '../Firebase';
 
 function Main() {
+    if (auth.currentUser) {
+        console.log(auth.currentUser.uid)
+    } else {
+        console.log(auth.currentUser)
+    }
+
+
     return (
         <div>
             <div className="mainProduct">

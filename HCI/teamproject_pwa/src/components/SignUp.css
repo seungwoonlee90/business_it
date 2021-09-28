@@ -1,4 +1,4 @@
-.signInForm {
+.signUpForm {
     position: absolute;
     height: 414px;
     width: 327px;
@@ -6,7 +6,7 @@
     display: flex;
 }
 
-.signInForm h4 {
+.signUpForm h4 {
     position: absolute;
     width: 327px;
     height: 40px;
@@ -22,7 +22,7 @@
     color: #000000;
 }
 
-.signInForm .email {
+.signUpForm .email {
     position: absolute;
     width: 327px;
     height: 56px;
@@ -32,7 +32,7 @@
     padding-left: 5px;
 }
 
-.signInForm .password {
+.signUpForm .password {
     position: absolute;
     width: 327px;
     height: 56px;
@@ -42,7 +42,7 @@
     padding-left: 5px;
 }
 
-.signIn {
+.signUpForm .signUp {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,20 +52,6 @@
     height: 60px;
     left: 24px;
     top: 272px;
-    background: #18191F;
-    border-radius: 16px;
-}
-
-.signUp {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-    position: absolute;
-    width: 327px;
-    height: 60px;
-    left: 24px;
-    top: 350px;
     background: #18191F;
     border-radius: 16px;
 }

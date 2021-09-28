@@ -3,7 +3,8 @@ import './App.css';
 import { Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Main from './components/Main';
-import Profile from './components/Profile';
+import Profile from './components/ProfileMain';
+import SignUp from './components/SignUp';
 
 function App() {
   let [init, initEdit] = useState(true);
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/profile">
             <Profile />
+          </Route>
+          <Route path="/signup">
+            <SignUp />
           </Route>
         </div>
       :

@@ -1,26 +1,28 @@
 import React from 'react';
-import './Profile.css';
-import SignIn from './SignIn';
+import './ProfileDetail.css';
+import auth from '../Firebase';
 
 function Profile(){
+    let email = auth.currentUser.email;
     return (
         <>
-        <SignIn />
-        {/* <div className="profileBody">
+        <div className="profileBody">
             <article className="profile">
                 <img src="https://doodleipsum.com/600?shape=circle&bg=ceebff" alt="profile"/>
-                <h1>teamproject_admin</h1>
+                <h1>admin</h1>
                 <h2>@HCI</h2>
             </article>
             <ul className="contact">
                 <li>
-                    <span>admin@gmail.com</span>
+                    <span>{email}</span>
                 </li>		
             </ul>
-            <button onClick={()=>{
+            <button onClick={(e)=>{
+                e.preventDefault();
+                auth.signOut();
                 window.location.href = '/'
             }}>Log out</button>
-        </div> */}
+        </div>
         </>
     )
 }
