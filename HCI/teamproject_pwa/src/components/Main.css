@@ -17,3 +17,8 @@
 .mainDesc {
     font-size: 100%;
 }
+
+.uploadButton {
+    z-index: 1;
+    
+}

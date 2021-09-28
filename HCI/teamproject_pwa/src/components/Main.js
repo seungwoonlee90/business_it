@@ -12,6 +12,7 @@ function Main() {
 
 
     return (
+        <>
         <div>
             <div className="mainProduct">
                 <Container>
@@ -42,6 +43,10 @@ function Main() {
                 </Container>
             </div>
         </div>
+        <div className="uploadButton">
+            <button>글쓰기</button>
+        </div>
+        </>
     )
 }
 
