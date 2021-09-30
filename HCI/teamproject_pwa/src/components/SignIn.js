@@ -21,9 +21,7 @@ function SignIn(){
                 <input className="password" type="password" placeholder="🔑 password" onChange={(e)=>{passwordEdit(e.target.value)}} required />
                 <button className="signIn">Sign In</button>
             </form>
-                <button className="signUp" onClick={()=>{
-                    window.location.href = "/signup"
-                }}>Sign Up</button>
+            <p className="signUp"> You are new? <a href="/signup">Create new</a> ✨</p>
         </div>
     )
 }
