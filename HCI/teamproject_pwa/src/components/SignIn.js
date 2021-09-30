@@ -17,8 +17,8 @@ function SignIn(){
         <div className="signInForm">
             <h4>Log In</h4>
             <form onSubmit={LogIn}>
-                <input className="email" type="text" placeholder="email" onChange={(e)=>{emailEdit(e.target.value)}} required />
-                <input className="password" type="password" placeholder="*****" onChange={(e)=>{passwordEdit(e.target.value)}} required />
+                <input className="email" type="email" placeholder="💌 email" onChange={(e)=>{emailEdit(e.target.value)}} required />
+                <input className="password" type="password" placeholder="🔑 password" onChange={(e)=>{passwordEdit(e.target.value)}} required />
                 <button className="signIn">Sign In</button>
             </form>
                 <button className="signUp" onClick={()=>{

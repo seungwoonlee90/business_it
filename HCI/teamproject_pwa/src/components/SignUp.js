@@ -15,8 +15,8 @@ function SignUp(){
         <div className="signUpForm">
             <h4>Sign Up</h4>
             <form onSubmit={singUp}>
-                <input className="email" type="text" placeholder="email" onChange={(e)=>{emailEdit(e.target.value)}} required />
-                <input className="password" type="password" placeholder="*****" onChange={(e)=>{passwordEdit(e.target.value)}} required />
+                <input className="email" type="email" placeholder="💌 email" onChange={(e)=>{emailEdit(e.target.value)}} required />
+                <input className="password" type="password" placeholder="🔑 password" onChange={(e)=>{passwordEdit(e.target.value)}} required />
                 <button className="signUp">Sign Up</button>
             </form>
         </div>
