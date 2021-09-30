@@ -9,8 +9,9 @@ function SignIn(){
     let LogIn = async(e) => {
         e.preventDefault();
         await firebase.auth.signInWithEmailAndPassword(email, password);
-        console.log(firebase.auth.currentUser.uid);
-        window.location.href = "/"
+        firebase.auth.onAuthStateChanged(function(user){
+            window.location.href ="/"
+        })
     }
 
     return(

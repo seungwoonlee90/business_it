@@ -1,10 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import './Main.css';
-import firebase from '../Firebase';
 
 function Main() {
-    let currentUser = firebase.auth.currentUser
 
     return (
         <>
@@ -23,36 +21,7 @@ function Main() {
                     </Row>
                 </Container>
             </div>
-            <div className="mainProduct">
-                <Container>
-                    <Row className="mainImg">
-                        <Col>
-                            <Image src="https://doodleipsum.com/600?shape=circle&bg=ceebff" rounded width="150px"/>
-                        </Col>
-                        <Col className="mainDesc">
-                            <h4> 🐈‍⬛</h4>
-                            <p>2021년 9월 28일</p>
-                            <p>츄르가 맛있는 빼로</p>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
         </div>
-        {
-                currentUser 
-            ?
-                <div className="uploadButton">
-                <button onClick={()=>{
-                    window.location.href = "/upload"
-                }}>글쓰기</button>
-                </div>
-            :
-                <div className="uploadButton">
-                <button onClick={()=>{
-                    window.location.href = "/profile"
-                }}>글쓰기</button>
-                </div>
-        }
         </>
     )
 }

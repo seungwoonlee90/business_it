@@ -6,10 +6,15 @@ import Main from './components/Main';
 import Profile from './components/ProfileMain';
 import SignUp from './components/SignUp';
 import Upload from './components/Upload';
+import About from './components/About';
+import firebase from './Firebase';
 
 function App() {
   let [init, initEdit] = useState(true);
-  console.log(initEdit);
+  console.log(initEdit)
+  let auth = firebase.auth;
+  let user = auth.currentUser;
+  console.log(user)
 
   return (
     <>
@@ -28,6 +33,9 @@ function App() {
           </Route>
           <Route path="/upload">
             <Upload />
+          </Route>
+          <Route path="/about">
+            <About />
           </Route>
         </div>
       :
