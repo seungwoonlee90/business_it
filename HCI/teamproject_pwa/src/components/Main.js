@@ -1,15 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import './Main.css';
-import auth from '../Firebase';
+import firebase from '../Firebase';
 
 function Main() {
-    if (auth.currentUser) {
-        console.log(auth.currentUser.uid)
-    } else {
-        console.log(auth.currentUser)
-    }
-
+    let currentUser = firebase.auth.currentUser
 
     return (
         <>
@@ -43,9 +38,21 @@ function Main() {
                 </Container>
             </div>
         </div>
-        <div className="uploadButton">
-            <button>글쓰기</button>
-        </div>
+        {
+                currentUser 
+            ?
+                <div className="uploadButton">
+                <button onClick={()=>{
+                    window.location.href = "/upload"
+                }}>글쓰기</button>
+                </div>
+            :
+                <div className="uploadButton">
+                <button onClick={()=>{
+                    window.location.href = "/profile"
+                }}>글쓰기</button>
+                </div>
+        }
         </>
     )
 }

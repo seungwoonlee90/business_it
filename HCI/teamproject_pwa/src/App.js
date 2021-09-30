@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import Main from './components/Main';
 import Profile from './components/ProfileMain';
 import SignUp from './components/SignUp';
+import Upload from './components/Upload';
 
 function App() {
   let [init, initEdit] = useState(true);
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route path="/signup">
             <SignUp />
+          </Route>
+          <Route path="/upload">
+            <Upload />
           </Route>
         </div>
       :

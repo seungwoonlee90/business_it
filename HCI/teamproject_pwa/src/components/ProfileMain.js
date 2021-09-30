@@ -1,10 +1,10 @@
 import React from 'react';
 import ProfileDetail from './ProfileDetail'
 import SignIn from './SignIn';
-import auth from '../Firebase';
+import firebase from '../Firebase';
 
 function Profile(){
-    let user = auth.currentUser;
+    let user = firebase.auth.currentUser;
     return (
         <>
         {

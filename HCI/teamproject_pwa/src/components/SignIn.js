@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './SignIn.css';
-import auth from '../Firebase';
+import firebase from '../Firebase';
 
 function SignIn(){
 
@@ -8,8 +8,8 @@ function SignIn(){
     let [password, passwordEdit] = useState();
     let LogIn = async(e) => {
         e.preventDefault();
-        await auth.signInWithEmailAndPassword(email, password);
-        console.log(auth.currentUser.uid);
+        await firebase.auth.signInWithEmailAndPassword(email, password);
+        console.log(firebase.auth.currentUser.uid);
         window.location.href = "/"
     }
 
@@ -22,7 +22,7 @@ function SignIn(){
                 <button className="signIn">Sign In</button>
             </form>
                 <button className="signUp" onClick={()=>{
-                    window.location.href="/signup"
+                    window.location.href = "/signup"
                 }}>Sign Up</button>
         </div>
     )

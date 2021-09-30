@@ -1,9 +1,9 @@
 import React from 'react';
 import './ProfileDetail.css';
-import auth from '../Firebase';
+import firebase from '../Firebase';
 
 function Profile(){
-    let email = auth.currentUser.email;
+    let email = firebase.auth.currentUser.email;
     return (
         <>
         <div className="profileBody">
@@ -19,7 +19,7 @@ function Profile(){
             </ul>
             <button onClick={(e)=>{
                 e.preventDefault();
-                auth.signOut();
+                firebase.auth.signOut();
                 window.location.href = '/'
             }}>Log out</button>
         </div>
