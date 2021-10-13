@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
-import auth from './fbBase';
 import Navigation from './components/Navigation';
 import Main from './components/Main';
 import Profile from './components/Profile'
