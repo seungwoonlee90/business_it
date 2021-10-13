@@ -10,12 +10,26 @@ function Main() {
                 <Container>
                     <Row className="mainImg">
                         <Col>
-                            <Image src="https://doodleipsum.com/600?shape=circle&bg=ceebff" rounded width="150px"/>
+                            <Image src="http://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1223&fileTy=ADOPTIMG&fileNo=7&thumbTy=L" rounded width="150px"/>
                         </Col>
                         <Col className="mainDesc">
-                            <h4> 🐈‍⬛</h4>
-                            <p>2021년 9월 27일</p>
-                            <p>TV가 재미없는 빼로</p>
+                            <h4> 🐶</h4>
+                            <p>요크셔테리어(M)</p>
+                            <p>5세 2개월</p>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+            <div className="mainProduct">
+                <Container>
+                    <Row className="mainImg">
+                        <Col>
+                            <Image src="http://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1224&fileTy=ADOPTIMG&fileNo=2&thumbTy=L" rounded width="150px"/>
+                        </Col>
+                        <Col className="mainDesc">
+                            <h4>🐶</h4>
+                            <p>믹스(W)</p>
+                            <p>1세 2개월</p>
                         </Col>
                     </Row>
                 </Container>
