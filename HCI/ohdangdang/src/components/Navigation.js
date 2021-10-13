@@ -8,7 +8,7 @@ function Navigation(){
             <Container>
                 <Navbar.Brand as={Link} to="/">OH!Dang Dang</Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link as={Link} to="/">Upload</Nav.Link>
+                    <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
