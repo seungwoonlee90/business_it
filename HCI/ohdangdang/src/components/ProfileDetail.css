@@ -40,6 +40,9 @@ article.profile h2 {
 }
 
 button{
+    display: flex;
+    justify-content: center;
+    width: 70vw;
     background:#1AAB8A;
     color:#fff;
     border:none;
