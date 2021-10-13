@@ -28,7 +28,7 @@
     left: 24px;
     top: 88px;
     border-radius: 16px;
-    padding-left: 5px;
+    padding-left: 10px;
 }
 
 .signUpForm .password {
@@ -38,7 +38,7 @@
     left: 24px;
     top: 168px;
     border-radius: 16px;
-    padding-left: 5px;
+    padding-left: 10px;
 }
 
 .signUpForm .signUp {
