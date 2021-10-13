@@ -4,8 +4,6 @@ import {HashRouter} from 'react-router-dom';
 import App from './App';
 import firebase from './fbBase';
 
-console.log(firebase)
-
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
