@@ -13,7 +13,7 @@ function Main() {
 
     return (
         <>
-        <div>
+        <div className="content">
             <div className="mainProduct">
                 <Container>
                     <Row className="mainImg">

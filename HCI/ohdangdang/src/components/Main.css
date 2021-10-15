@@ -1,8 +1,12 @@
+.content {
+    margin-top: 100px;
+}
+
 .mainProduct {
     width: 90%;
     padding: 5%;
     background-color: #fff;
-    margin: 40px auto;
+    margin: 50px auto;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
@@ -16,9 +20,4 @@
 
 .mainDesc {
     font-size: 100%;
-}
-
-.uploadButton {
-    z-index: 1;
-    font-size: .8em
 }

@@ -1,98 +1,150 @@
-.menu {
+:root {
+  --primary-color: rgba(13, 110, 139, 0.75);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-spped: 0.75s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-wrap .toggler {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  max-width: 0;
-  transition: 0.5s ease;
-  z-index: 1;
-  background-color: #eee;
-}
-
-.burger-icon {
-  cursor: pointer;
-  display: inline-block;
-  position: absolute;
   z-index: 2;
-  padding: 8px 0;
-  top: 24px;
-  left: 24px;
-  user-select: none;
-  width: auto;
-  margin: 0;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
 }
 
-.burger-icon .burger-sticks {
-  background: #333;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background .2s ease-out;
-  width: 18px;
-}
-
-.burger-icon .burger-sticks:before,
-.burger-icon .burger-sticks:after {
-  background: #333;
-  content: '';
-  display: block;
-  height: 100%;
+.menu-wrap .hamburger {
   position: absolute;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-.burger-icon .burger-sticks:before {
-  top: 5px;
-}
-
-.burger-icon .burger-sticks:after {
-  top: -5px;
-}
-
-.burger-check {
-  display: none;
-}
-
-.burger-check:checked~.menu {
-  max-width: 200px;
-}
-
-.burger-check:checked~.burger-icon .burger-sticks {
-  background: transparent;
-}
-
-.burger-check:checked~.burger-icon .burger-sticks:before {
-  transform: rotate(-45deg);
-}
-
-.burger-check:checked~.burger-icon .burger-sticks:after {
-  transform: rotate(45deg);
-}
-
-.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:before,
-.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:after {
   top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.menu ul {
-    margin-top: 50px;
+.menu-wrap .hamburger > div {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
 }
 
-.menu ul li{
-    position: relative;
-    top: 40px;
-    left: -100px;
-    line-height: 50px;
-    transition: 0.2s ease;
-    z-index: 1;
+/* Top and bottom lines */
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
 }
 
-.burger-check:checked~.menu ul li {
-    display: block;
-    max-width: 200px;
-    top: 40px;
-    left: 40px;
-    line-height: 50px;
-    color: black;
+.menu-wrap .hamburger > div:after {
+  top: 10px;
+}
+
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-spped);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+
+
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%;
+  width: 250vw;
+  height: 250vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+
 }
