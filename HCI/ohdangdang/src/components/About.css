@@ -3,7 +3,24 @@
     background-image: url('https://mdl.artvee.com/sftb/10684po.jpg');
     box-sizing: border-box;
     background-position: center ;
+    position: relative;
 }
+
+
+.text-area {
+    position: absolute;
+    margin-top: 50%;
+    margin-left: 24px;
+}
+
+.text-area h1 {
+    margin-bottom: 22px;
+}
+
+.volume {
+    margin-bottom: 30px;
+}
+
 
 .Footer {
     position: absolute;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./Navigation.css"
-// import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 
 function Navigation(){
     return(
@@ -25,15 +24,3 @@ function Navigation(){
 }
 
 export default Navigation;
-
-{/* <Navbar expand="sm" variant="light" bg="light">
-            <Container>
-                <Nav className="me-auto">
-                    <NavDropdown title="OH!DANGDANG" id="basic-nav-dropdown">
-                        <NavDropdown.Item as={Link} to="/">Home</NavDropdown.Item>
-                        <NavDropdown.Item as={Link} to="/profile">Profile</NavDropdown.Item>
-                        <NavDropdown.Item as={Link} to="/about">About</NavDropdown.Item>
-                    </NavDropdown>
-                </Nav>
-            </Container>
-        </Navbar> */}

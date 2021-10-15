@@ -18,7 +18,7 @@ function Main() {
                 <Container>
                     <Row className="mainImg">
                         <Col>
-                            <Image src="http://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1223&fileTy=ADOPTIMG&fileNo=7&thumbTy=L" rounded width="150px"/>
+                            <Image src="https://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1223&fileTy=ADOPTIMG&fileNo=7&thumbTy=L" rounded width="150px"/>
                         </Col>
                         <Col className="mainDesc">
                             <h4> 🐶</h4>
@@ -32,7 +32,7 @@ function Main() {
                 <Container>
                     <Row className="mainImg">
                         <Col>
-                            <Image src="http://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1224&fileTy=ADOPTIMG&fileNo=2&thumbTy=L" rounded width="150px"/>
+                            <Image src="https://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1224&fileTy=ADOPTIMG&fileNo=2&thumbTy=L" rounded width="150px"/>
                         </Col>
                         <Col className="mainDesc">
                             <h4>🐶</h4>
