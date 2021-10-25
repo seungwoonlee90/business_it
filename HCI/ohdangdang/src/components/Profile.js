@@ -4,9 +4,21 @@ import auth from "../fbBase";
 function Profile() {
   let user = auth.currentUser.email;
 
+  const Logout = async (e) => {
+    e.preventDefault();
+    await auth.signOut();
+    window.location.hash = "/";
+  };
+
   return (
     <div className="Profile">
-      <div className="thumb">{user}</div>
+      <img className="thumb" alt="profile" />
+      <div className="profile-inner">
+        <div className="profile-email">{user}</div>
+        <button onClick={Logout} className="signIn">
+          Log Out
+        </button>
+      </div>
     </div>
   );
 }

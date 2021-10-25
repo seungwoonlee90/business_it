@@ -205,8 +205,39 @@ a {
   font-weight: bold;
 }
 
-/* 네비게이션 부분 */
+/* Profile */
+.Profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
 
+.Profile .thumb {
+  height: 50%;
+  width: 100%;
+  background-image: url("https://mdl.artvee.com/sftb/100386ab.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.Profile .profile-inner {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-email {
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+/* 네비게이션 부분 */
 .gnb {
   width: 100%;
   height: 70px;
