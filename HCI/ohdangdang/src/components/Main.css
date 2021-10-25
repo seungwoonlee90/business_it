@@ -1,23 +1,215 @@
-.content {
-    margin-top: 100px;
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+  background-color: #485861;
+  color: #ffe6cf;
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 500;
+  overflow-x: hidden;
+  margin-bottom: 72px;
 }
 
-.mainProduct {
-    width: 90%;
-    padding: 5%;
-    background-color: #fff;
-    margin: 50px auto;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+  line-height: 1;
 }
 
-.mainProduct img {
-    width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	margin-bottom: 10px;
+h1 {
+  font-size: 30px;
 }
 
-.mainDesc {
-    font-size: 100%;
+h2 {
+  font-size: 24px;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #ffe6cf;
+  text-decoration: none;
+}
+
+.text-area {
+  margin: 24px;
+  margin-top: 10vh;
+  margin-bottom: 12px;
+}
+
+.text-area .desc {
+  margin-top: 12px;
+}
+
+.text-area h1 {
+  margin-bottom: 22px;
+}
+
+.volume {
+  margin-bottom: 30px;
+}
+
+.list {
+  font-size: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 148px;
+  grid-column-gap: 17px;
+  grid-row-gap: 18px;
+  padding: 24px;
+}
+
+.list .item {
+  background-color: dimgray;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.list .item:nth-child(1) {
+  background-image: url("https://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1223&fileTy=ADOPTIMG&fileNo=7&thumbTy=L");
+}
+
+.list .item:nth-child(2) {
+  background-image: url("https://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1224&fileTy=ADOPTIMG&fileNo=2&thumbTy=L");
+}
+
+.list .item:nth-child(3) {
+  background-image: url("https://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1224&fileTy=ADOPTIMG&fileNo=2&thumbTy=L");
+}
+
+.list .item:nth-child(4) {
+  background-image: url("https://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1223&fileTy=ADOPTIMG&fileNo=7&thumbTy=L");
+}
+
+.list .item:nth-child(5) {
+  background-image: url("https://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1223&fileTy=ADOPTIMG&fileNo=7&thumbTy=L");
+}
+
+.list .item:nth-child(6) {
+  background-image: url("https://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1224&fileTy=ADOPTIMG&fileNo=2&thumbTy=L");
+}
+
+/* profile 부분 */
+
+.signInForm {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  top: 15%;
+}
+
+.signInForm h4 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 40px;
+  top: 24px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  color: #ffe6cf;
+}
+
+.signInForm .email {
+  position: absolute;
+  width: 88vw;
+  height: 56px;
+  left: 24px;
+  top: 88px;
+  border-radius: 16px;
+  padding-left: 10px;
+}
+
+.signInForm .password {
+  position: absolute;
+  width: 88vw;
+  height: 56px;
+  left: 24px;
+  top: 168px;
+  border-radius: 16px;
+  padding-left: 10px;
+}
+
+.signIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  position: absolute;
+  width: 88vw;
+  height: 60px;
+  left: 24px;
+  top: 272px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+}
+
+.signUp {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  position: absolute;
+  width: 100vw;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 350px;
+}
+
+.signUp a {
+  color: red;
+  font-weight: bold;
+}
+
+/* 네비게이션 부분 */
+
+.gnb {
+  width: 100%;
+  height: 72px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #394952;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gnb a {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.3;
+}
+
+.gnb .active {
+  opacity: 1;
 }
