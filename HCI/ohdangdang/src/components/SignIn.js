@@ -1,52 +1,64 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import auth from "../fbBase";
+import Profile from "./Profile";
 
 function SignIn() {
-  let [email, emailEdit] = useState();
-  let [password, passwordEdit] = useState();
-
+  let user = auth.currentUser;
+  if (user !== null) {
+    console.log(user.email);
+  } else {
+    console.log(user);
+  }
   let LogIn = async (e) => {
     e.preventDefault();
-    await auth.signInWithEmailAndPassword(email, password);
+    let email = document.querySelector(".email").value;
+    let password = document.querySelector(".password").value;
+    await auth
+      .signInWithEmailAndPassword(email, password)
+      .then()
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode);
+        alert(errorMessage);
+      });
     auth.onAuthStateChanged(function (user) {
       window.location.hash = "/";
     });
   };
 
-  let signup = () => {
-    window.location.hash = "/signup";
-  };
-
   return (
-    <div className="signInForm">
-      <h4>Log In</h4>
-      <form onSubmit={LogIn}>
-        <input
-          className="email"
-          type="email"
-          placeholder="💌 email"
-          onChange={(e) => {
-            emailEdit(e.target.value);
-          }}
-          required
-        />
-        <input
-          className="password"
-          type="password"
-          placeholder="🔑 password"
-          onChange={(e) => {
-            passwordEdit(e.target.value);
-          }}
-          required
-        />
-        <button className="signIn">Sign In</button>
-      </form>
-      <p className="signUp">
-        You are new?
-        <Link to="/signup">Create new ✨</Link>
-      </p>
-    </div>
+    <>
+      {user ? (
+        <Profile />
+      ) : (
+        <div className="signInForm">
+          <h4>Log In</h4>
+          <form>
+            <input
+              className="email"
+              type="email"
+              placeholder="💌&nbsp; email"
+              required
+            />
+            <input
+              className="password"
+              type="password"
+              placeholder="🔑&nbsp; password"
+              required
+            />
+            <button onClick={LogIn} className="signIn">
+              Sign In
+            </button>
+          </form>
+          <p className="signUp">
+            You are new?
+            <Link to="/signup">&nbsp; Create new ✨</Link>
+          </p>
+        </div>
+      )}
+    </>
   );
 }
 

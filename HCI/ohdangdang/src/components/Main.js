@@ -1,12 +1,6 @@
 import React from "react";
 
 function Main() {
-  if ("geolocation" in navigator) {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      console.log(position.coords.longitude, position.coords.latitude);
-    });
-  }
-
   return (
     <>
       <div className="text-area">
