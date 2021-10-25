@@ -5,9 +5,9 @@ function About() {
     <div className="bg">
       <div className="text-area">
         <h1>
-          <div className="volume">Ver .1</div>
+          <div className="volume">ver 0.5</div>
           <div className="title">
-            @HCI <br /> 2조 <br /> 오댕댕 프로젝트
+            @HCI 2조 <br /> Term Project
           </div>
         </h1>
         <p>
