@@ -17,7 +17,10 @@ function SignIn() {
     let password = document.querySelector(".password").value;
     await auth
       .signInWithEmailAndPassword(email, password)
-      .then()
+      .then((userCredential) => {
+        const user = userCredential.user;
+        localStorage.setItem("email", user.email);
+      })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
