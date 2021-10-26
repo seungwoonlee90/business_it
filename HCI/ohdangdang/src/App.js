@@ -9,7 +9,6 @@ import About from "./components/About";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
-  console.log(setIsLoggedIn);
   return (
     <>
       {isLoggedIn ? (
