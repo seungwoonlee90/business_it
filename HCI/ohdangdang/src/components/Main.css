@@ -261,3 +261,41 @@ a {
   align-items: center;
   opacity: 1;
 }
+
+/* Upload */
+.Upload {
+  padding: 16px;
+  width: 88vw;
+  height: 60px;
+  background-color: #333d79;
+  color: #faebef;
+  font-weight: 600;
+  font-size: large;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+
+.developing {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  padding-top: 30vh;
+}
+
+.developing h4 {
+  margin-bottom: 50px;
+}
+
+.developing span {
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

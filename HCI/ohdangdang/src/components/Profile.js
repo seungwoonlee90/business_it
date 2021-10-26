@@ -10,11 +10,19 @@ function Profile() {
     window.location.hash = "/";
   };
 
+  const Upload = (e) => {
+    e.preventDefault();
+    window.location.hash = "/upload";
+  };
+
   return (
     <div className="Profile">
       <img className="thumb" alt="profile" />
       <div className="profile-inner">
         <div className="profile-email">{user}</div>
+        <button onClick={Upload} className="Upload">
+          Upload
+        </button>
         <button onClick={Logout} className="signIn">
           Log Out
         </button>

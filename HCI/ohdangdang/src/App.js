@@ -5,6 +5,7 @@ import Navigation from "./components/Navigation";
 import Main from "./components/Main";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/Signup";
+import Upload from "./components/Upload";
 import About from "./components/About";
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/signup">
             <SignUp />
+          </Route>
+          <Route path="/upload">
+            <Upload />
           </Route>
           <Route path="/about">
             <About />
