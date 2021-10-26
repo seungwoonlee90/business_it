@@ -10,6 +10,7 @@ function SignIn() {
   } else {
     console.log(user);
   }
+
   let LogIn = async (e) => {
     e.preventDefault();
     let email = document.querySelector(".email").value;
