@@ -163,35 +163,38 @@ a {
 }
 
 .signInForm .username {
-  width: 88vw;
+  width: 330px;
   height: 56px;
   font-size: 15px;
   border-radius: 16px;
   padding-left: 10px;
   margin-bottom: 15px;
+  display: block;
 }
 
 .signInForm .email {
-  width: 88vw;
+  width: 330px;
   height: 56px;
   font-size: 15px;
   border-radius: 16px;
   padding-left: 10px;
   margin-bottom: 15px;
+  display: block;
 }
 
 .signInForm .password {
-  width: 88vw;
+  width: 330px;
   height: 56px;
   font-size: 15px;
   border-radius: 16px;
   padding-left: 10px;
   margin-bottom: 15px;
+  display: block;
 }
 
 .signIn {
   padding: 16px;
-  width: 88vw;
+  width: 330px;
   height: 60px;
   background-color: #333d79;
   color: #faebef;
@@ -231,6 +234,7 @@ a {
   background-size: cover;
   background-position: center;
   border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .Profile .profile-inner {
@@ -280,7 +284,7 @@ a {
 /* Upload */
 .Upload {
   padding: 16px;
-  width: 88vw;
+  width: 330px;
   height: 60px;
   background-color: #333d79;
   color: #faebef;
