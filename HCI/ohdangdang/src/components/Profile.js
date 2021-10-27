@@ -26,7 +26,7 @@ function Profile() {
 
   return (
     <div className="Profile">
-      <img className="thumb" alt="profile" />
+      <img className="thumb" alt="thumbnail" />
       <div className="profile-inner">
         <div className="profile-username"></div>
         <div className="profile-email">{user}</div>

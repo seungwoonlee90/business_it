@@ -225,11 +225,12 @@ a {
 }
 
 .Profile .thumb {
-  height: 50%;
-  width: 100%;
-  background-image: url("https://mdl.artvee.com/sftb/100386ab.jpg");
+  height: 200px;
+  width: 200px;
+  background-image: url("https://doodleipsum.com/600?shape=circle&bg=ceebff");
   background-size: cover;
   background-position: center;
+  border-radius: 50%;
 }
 
 .Profile .profile-inner {
