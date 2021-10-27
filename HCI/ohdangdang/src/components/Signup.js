@@ -1,21 +1,28 @@
 import React from "react";
-import auth from "../fbBase";
+import firebase_ from "../fbBase";
 
 function Signup() {
   let LogIn = async (e) => {
     e.preventDefault();
+    let username = document.querySelector(".username").value;
     let email = document.querySelector(".email").value;
     let password = document.querySelector(".password").value;
-    await auth
+    await firebase_.auth
       .createUserWithEmailAndPassword(email, password)
-      .then()
+      .then((result) => {
+        let userInfo = {
+          name: username,
+          email: email,
+        };
+        firebase_.db.collection("user").doc(result.user.uid).set({ userInfo });
+      })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorCode);
         alert(errorMessage);
       });
-    auth.onAuthStateChanged(function (user) {
+    firebase_.auth.onAuthStateChanged(function (user) {
       window.location.hash = "/";
     });
   };
@@ -24,6 +31,12 @@ function Signup() {
     <div className="signInForm">
       <h4>Sign Up</h4>
       <form>
+        <input
+          className="username"
+          type="text"
+          placeholder="👀&nbsp; username"
+          required
+        />
         <input
           className="email"
           type="email"

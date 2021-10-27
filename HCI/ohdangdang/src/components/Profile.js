@@ -1,12 +1,21 @@
 import React from "react";
-import auth from "../fbBase";
+import firebase_ from "../fbBase";
 
 function Profile() {
-  let user = auth.currentUser.email;
+  let user = firebase_.auth.currentUser.email;
+  let uid = firebase_.auth.currentUser.uid;
+  firebase_.db
+    .collection("user")
+    .doc(uid)
+    .get()
+    .then((res) => {
+      let username = res.data().userInfo.name;
+      document.querySelector(".profile-username").innerText = username;
+    });
 
   const Logout = async (e) => {
     e.preventDefault();
-    await auth.signOut();
+    await firebase_.auth.signOut();
     window.location.hash = "/";
   };
 
@@ -19,6 +28,7 @@ function Profile() {
     <div className="Profile">
       <img className="thumb" alt="profile" />
       <div className="profile-inner">
+        <div className="profile-username"></div>
         <div className="profile-email">{user}</div>
         <button onClick={Upload} className="Upload">
           Upload

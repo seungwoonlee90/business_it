@@ -162,6 +162,15 @@ a {
   margin-bottom: 15px;
 }
 
+.signInForm .username {
+  width: 88vw;
+  height: 56px;
+  font-size: 15px;
+  border-radius: 16px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
 .signInForm .email {
   width: 88vw;
   height: 56px;
@@ -231,10 +240,15 @@ a {
   align-items: center;
 }
 
+.profile-username {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
 .profile-email {
   font-size: 20px;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* 네비게이션 부분 */
