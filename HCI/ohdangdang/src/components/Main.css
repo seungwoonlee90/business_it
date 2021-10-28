@@ -145,27 +145,7 @@ a {
   margin-bottom: 15px;
 }
 
-.signInForm .username {
-  width: 330px;
-  height: 56px;
-  font-size: 15px;
-  border-radius: 16px;
-  padding-left: 10px;
-  margin-bottom: 15px;
-  display: block;
-}
-
-.signInForm .email {
-  width: 330px;
-  height: 56px;
-  font-size: 15px;
-  border-radius: 16px;
-  padding-left: 10px;
-  margin-bottom: 15px;
-  display: block;
-}
-
-.signInForm .password {
+.signInForm .signin-inner {
   width: 330px;
   height: 56px;
   font-size: 15px;

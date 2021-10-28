@@ -36,13 +36,13 @@ function SignIn() {
           <h4>Log In</h4>
           <form>
             <input
-              className="email"
+              className="signin-inner"
               type="email"
               placeholder="💌&nbsp; email"
               required
             />
             <input
-              className="password"
+              className="signin-inner"
               type="password"
               placeholder="🔑&nbsp; password"
               required

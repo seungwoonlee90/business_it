@@ -4,15 +4,17 @@ import firebase_ from "../fbBase";
 function Signup() {
   let LogIn = async (e) => {
     e.preventDefault();
-    let username = document.querySelector(".username").value;
-    let email = document.querySelector(".email").value;
-    let password = document.querySelector(".password").value;
+    let username = document.querySelectorAll(".signin-inner")[0].value;
+    let mbti = document.querySelectorAll(".signin-inner")[1].value;
+    let email = document.querySelectorAll(".signin-inner")[2].value;
+    let password = document.querySelectorAll(".signin-inner")[3].value;
     await firebase_.auth
       .createUserWithEmailAndPassword(email, password)
       .then((result) => {
         let userInfo = {
           name: username,
           email: email,
+          mbti: mbti,
         };
         firebase_.db.collection("user").doc(result.user.uid).set({ userInfo });
       })
@@ -32,19 +34,26 @@ function Signup() {
       <h4>Sign Up</h4>
       <form>
         <input
-          className="username"
+          className="signin-inner"
           type="text"
           placeholder="👀&nbsp; username"
           required
         />
         <input
-          className="email"
+          className="signin-inner"
+          type="text"
+          placeholder="🌈&nbsp; mbti"
+          style={{ textTransform: "uppercase" }}
+          required
+        />
+        <input
+          className="signin-inner"
           type="email"
           placeholder="💌&nbsp; email"
           required
         />
         <input
-          className="password"
+          className="signin-inner"
           type="password"
           placeholder="🔑&nbsp; password"
           required
