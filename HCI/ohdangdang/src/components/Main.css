@@ -95,11 +95,11 @@ a {
 .list {
   font-size: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 148px;
-  grid-column-gap: 17px;
-  grid-row-gap: 5vh;
-  padding: 24px;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 150px;
+  grid-column-gap: 10px;
+  grid-row-gap: 2vh;
+  padding: 18px;
 }
 
 .list .item {
@@ -113,6 +113,7 @@ a {
 .list .item .youtube {
   height: 100%;
   width: 100%;
+  border-radius: 10px;
 }
 
 .volume {

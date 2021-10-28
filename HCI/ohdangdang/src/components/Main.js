@@ -5,6 +5,7 @@ function Main() {
   const opts = {
     playerVars: {
       autoplay: 0,
+      playsinline: 1,
     },
   };
   return (
