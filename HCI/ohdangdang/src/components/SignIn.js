@@ -8,8 +8,8 @@ function SignIn() {
 
   let LogIn = async (e) => {
     e.preventDefault();
-    let email = document.querySelector(".email").value;
-    let password = document.querySelector(".password").value;
+    let email = document.querySelectorAll(".signin-inner")[0].value;
+    let password = document.querySelectorAll(".signin-inner")[1].value;
     await firebase_.auth
       .signInWithEmailAndPassword(email, password)
       .then((userCredential) => {
