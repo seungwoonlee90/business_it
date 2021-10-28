@@ -98,39 +98,21 @@ a {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 148px;
   grid-column-gap: 17px;
-  grid-row-gap: 18px;
+  grid-row-gap: 5vh;
   padding: 24px;
 }
 
 .list .item {
-  background-color: dimgray;
-  background-size: cover;
-  background-position: center;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.list .item:nth-child(1) {
-  background-image: url("https://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1223&fileTy=ADOPTIMG&fileNo=7&thumbTy=L");
-}
-
-.list .item:nth-child(2) {
-  background-image: url("https://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1224&fileTy=ADOPTIMG&fileNo=2&thumbTy=L");
-}
-
-.list .item:nth-child(3) {
-  background-image: url("https://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1224&fileTy=ADOPTIMG&fileNo=2&thumbTy=L");
-}
-
-.list .item:nth-child(4) {
-  background-image: url("https://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1223&fileTy=ADOPTIMG&fileNo=7&thumbTy=L");
-}
-
-.list .item:nth-child(5) {
-  background-image: url("https://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1223&fileTy=ADOPTIMG&fileNo=7&thumbTy=L");
-}
-
-.list .item:nth-child(6) {
-  background-image: url("https://animal.seoul.go.kr/comm/getImage?srvcId=MEDIA&upperNo=1224&fileTy=ADOPTIMG&fileNo=2&thumbTy=L");
+.list .item .youtube {
+  height: 100%;
+  width: 100%;
 }
 
 .volume {
