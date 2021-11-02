@@ -74,6 +74,17 @@ a {
   text-decoration: none;
 }
 
+/* profile 부분 */
+.mainForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  text-align: center;
+}
+
 .text-area {
   margin: 24px;
   margin-top: 8vh;
