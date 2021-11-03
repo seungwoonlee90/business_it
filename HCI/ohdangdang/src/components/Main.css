@@ -82,7 +82,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .text-area {

@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <div className="bg">
+    <div className="mainForm">
       <div className="text-area">
         <h1>
           <div className="volume">ver 0.5</div>
