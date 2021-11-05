@@ -1,9 +1,10 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useParams, useHistory } from "react-router-dom";
 
-function Mbti() {
+function Mbti(props) {
   let { id } = useParams();
-
+  let [qId, qIdEdit] = useState(1);
+  let history = useHistory();
   return (
     <div className="mbti">
       <header>
@@ -13,10 +14,30 @@ function Mbti() {
         </div>
       </header>
       <div className="question">
-        <div>Q1.나는 큰 강아지가 좋다</div>
+        <Link to={`/mbti/${qId}`}></Link>
+        <div>
+          Q{props.props[id].id}
+          {props.props[id].question}
+        </div>
         <form>
-          <button>그렇다</button>
-          <button>아니다</button>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              qIdEdit(qId + 1);
+              history.push(`/mbti/${qId}`);
+            }}
+          >
+            그렇다
+          </button>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              qIdEdit(qId + 1);
+              history.push(`/mbti/${qId}`);
+            }}
+          >
+            아니다
+          </button>
         </form>
       </div>
     </div>
