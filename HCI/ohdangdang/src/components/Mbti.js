@@ -25,16 +25,20 @@ function Mbti(props) {
           나와 어울리는 강아지는 <br /> 어떤 강아지일까 ?
         </div>
       </header>
-      <div className="question">
-        <div>
-          Q{props.props[id].id}
-          {props.props[id].question}
+      {parseInt(qId) === 0 ? (
+        <div className="question">설문시작!</div>
+      ) : (
+        <div className="question">
+          <div>
+            Q{props.props[id].id}
+            {props.props[id].question}
+          </div>
+          <form>
+            <button onClick={handleClick}>그렇다</button>
+            <button onClick={handleClick}>아니다</button>
+          </form>
         </div>
-        <form>
-          <button onClick={handleClick}>그렇다</button>
-          <button onClick={handleClick}>아니다</button>
-        </form>
-      </div>
+      )}
     </div>
   );
 }
