@@ -7,6 +7,7 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/Signup";
 import Upload from "./components/Upload";
 import About from "./components/About";
+import Mbti from "./components/Mbti";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="/mbti">
+            <Mbti />
           </Route>
           <Navigation />
         </div>

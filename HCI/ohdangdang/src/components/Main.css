@@ -293,3 +293,65 @@ a {
     transform: rotate(0deg);
   }
 }
+
+/* Montly */
+.monthly {
+  height: 100vh;
+  width: 100vw;
+  font-size: 1.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.monthly .control {
+  display: flex;
+  margin-bottom: 50px;
+}
+.monthly table {
+  display: flex;
+  width: 80vw;
+  height: 80vh;
+}
+.monthly table tbody {
+  display: flex;
+  flex-direction: column;
+}
+.monthly tr {
+  display: flex;
+  flex-direction: row;
+}
+.monthly td {
+  display: flex;
+  border: 1px solid gray;
+  width: 12vw;
+  height: 8vh;
+}
+.monthly td span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.mbti {
+  position: absolute;
+  top: 2vh;
+  height: 100vh;
+  width: 100vw;
+  font-weight: 800;
+  font-size: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2vh;
+}
+
+.mbti div {
+  font-size: 20px;
+  text-align: center;
+}
+
+.mbti .question {
+  margin-top: 20px;
+}

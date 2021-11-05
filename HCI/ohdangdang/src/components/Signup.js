@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import firebase_ from "../fbBase";
 
 function Signup() {
@@ -62,6 +63,7 @@ function Signup() {
           Sign Up
         </button>
       </form>
+      <Link to="/mbti">&nbsp; MBTI TEST ✨</Link>
     </div>
   );
 }
