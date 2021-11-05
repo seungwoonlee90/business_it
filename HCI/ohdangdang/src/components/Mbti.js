@@ -1,6 +1,9 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 function Mbti() {
+  let { id } = useParams();
+
   return (
     <div className="mbti">
       <header>

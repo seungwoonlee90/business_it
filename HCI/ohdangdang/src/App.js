@@ -30,7 +30,7 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/mbti">
+          <Route path="/mbti/:id">
             <Mbti />
           </Route>
           <Navigation />
