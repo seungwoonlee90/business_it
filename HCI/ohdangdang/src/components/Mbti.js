@@ -1,10 +1,22 @@
 import React, { useState } from "react";
-import { Link, useParams, useHistory } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 function Mbti(props) {
   let { id } = useParams();
-  let [qId, qIdEdit] = useState(1);
+  let [qId, qIdEdit] = useState(id);
   let history = useHistory();
+
+  function handleClick(e) {
+    e.preventDefault();
+    if (qId < 3) {
+      qIdEdit(parseInt(qId) + 1);
+      history.push(`/mbti/${qId}`);
+    } else {
+      qIdEdit(0);
+      history.push(`/mbti/${qId}`);
+    }
+  }
+
   return (
     <div className="mbti">
       <header>
@@ -14,30 +26,13 @@ function Mbti(props) {
         </div>
       </header>
       <div className="question">
-        <Link to={`/mbti/${qId}`}></Link>
         <div>
           Q{props.props[id].id}
           {props.props[id].question}
         </div>
         <form>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              qIdEdit(qId + 1);
-              history.push(`/mbti/${qId}`);
-            }}
-          >
-            그렇다
-          </button>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              qIdEdit(qId + 1);
-              history.push(`/mbti/${qId}`);
-            }}
-          >
-            아니다
-          </button>
+          <button onClick={handleClick}>그렇다</button>
+          <button onClick={handleClick}>아니다</button>
         </form>
       </div>
     </div>
