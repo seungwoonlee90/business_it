@@ -1,10 +1,15 @@
 import React from "react";
-import firebase_ from "../fbBase";
+import initFirebase from "../fbBase";
+import firebase from 'firebase/compat/app'
+import "firebase/compat/auth"
+import "firebase/compat/firestore";
 
+
+initFirebase()
 function Profile() {
-  let user = firebase_.auth.currentUser.email;
-  let uid = firebase_.auth.currentUser.uid;
-  firebase_.db
+  let user = firebase.auth().currentUser.email
+  let uid = firebase.auth().currentUser.uid
+  firebase.firestore()
     .collection("user")
     .doc(uid)
     .get()
@@ -15,7 +20,7 @@ function Profile() {
 
   const Logout = async (e) => {
     e.preventDefault();
-    await firebase_.auth.signOut();
+    await firebase.auth().signOut();
     window.location.hash = "/";
   };
 

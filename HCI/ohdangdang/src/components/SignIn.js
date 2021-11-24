@@ -1,16 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import firebase_ from "../fbBase";
+import initFirebase from "../fbBase";
+import firebase from "firebase/compat/app"
+import "firebase/compat/auth"
 import Profile from "./Profile";
 
-function SignIn() {
-  let user = firebase_.auth.currentUser;
 
+initFirebase()
+
+function SignIn() {
+  let user = firebase.auth().currentUser;
+  console.log(user)
   let LogIn = async (e) => {
     e.preventDefault();
     let email = document.querySelectorAll(".signin-inner")[0].value;
     let password = document.querySelectorAll(".signin-inner")[1].value;
-    await firebase_.auth
+    await firebase.auth()
       .signInWithEmailAndPassword(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
@@ -22,7 +27,7 @@ function SignIn() {
         console.log(errorCode);
         alert(errorMessage);
       });
-    firebase_.auth.onAuthStateChanged(function (user) {
+      firebase.auth().onAuthStateChanged(function (user) {
       window.location.hash = "/";
     });
   };

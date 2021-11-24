@@ -1,6 +1,8 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
+import 'firebase/compat/analytics'
+import 'firebase/compat/performance'
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -11,10 +13,17 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_APP_ID,
 };
 
-!firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
+export default function initFirebase() {
+  if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig)
+    if (typeof window !== 'undefined') {
+      if('measurementId' in firebaseConfig) {
+        firebase.analytics()
+        firebase.performance()
+      }
+    }
+    console.log('Firebase was successfully init.')
+  }
+}
 
-const auth = firebase.auth();
-const db = firebase.firestore();
-const firebase_ = { auth, db };
 
-export default firebase_;

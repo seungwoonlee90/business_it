@@ -1,7 +1,12 @@
 import React from "react";
 import YouTube from "react-youtube";
+import initFirebase from "../fbBase"
+import firebase from "firebase/compat/app"
+
+initFirebase()
 
 function Main() {
+  console.log(firebase.auth().currentUser)
   const opts = {
     playerVars: {
       autoplay: 0,

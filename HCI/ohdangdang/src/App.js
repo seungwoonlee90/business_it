@@ -7,12 +7,10 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/Signup";
 import Upload from "./components/Upload";
 import About from "./components/About";
-import Mbti from "./components/Mbti";
-import questions from "./components/Question.js";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const [question, questionEdit] = useState(questions);
+  console.log(setIsLoggedIn)
   return (
     <>
       {isLoggedIn ? (
@@ -31,9 +29,6 @@ function App() {
           </Route>
           <Route path="/about">
             <About />
-          </Route>
-          <Route path="/mbti/:id">
-            <Mbti props={question} />
           </Route>
           <Navigation />
         </div>
