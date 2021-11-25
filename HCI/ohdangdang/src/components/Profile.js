@@ -1,6 +1,7 @@
 import React from "react";
 import initFirebase from "../fbBase";
 import firebase from 'firebase/compat/app'
+import profile from "../oww.png";
 import "firebase/compat/auth"
 import "firebase/compat/firestore";
 
@@ -31,7 +32,7 @@ function Profile() {
 
   return (
     <div className="Profile">
-      <img className="thumb" alt="thumbnail" />
+      <img className="thumb" alt="thumbnail" src={profile} />
       <div className="profile-inner">
         <div className="profile-username"></div>
         <div className="profile-email">{user}</div>

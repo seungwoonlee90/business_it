@@ -4,6 +4,7 @@ import initFirebase from "../fbBase";
 import firebase from "firebase/compat/app"
 import "firebase/compat/auth"
 import Profile from "./Profile";
+import dog from "../what.png";
 
 
 initFirebase()
@@ -38,6 +39,7 @@ function SignIn() {
         <Profile />
       ) : (
         <div className="signInForm">
+          <img src={dog} alt="fire-dog" width="25%"/>
           <h4>Log In</h4>
           <form>
             <input

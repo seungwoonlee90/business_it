@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   return (
     <div className="mainForm">
-      <div className="text-area">
+      <div className="text-area about">
         <h1>
           <div className="volume">ver 0.5</div>
           <div className="title">

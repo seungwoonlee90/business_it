@@ -6,7 +6,6 @@ import main from '../main.png'
 initFirebase()
 
 function Main() {
-  console.log(firebase.auth().currentUser)
   return (
     <>
       <div className="mainForm">
@@ -14,7 +13,11 @@ function Main() {
           <img src={main} alt="main" width="20%" />
           <div>
           <h1>OH! DangDang</h1>
-          {firebase.auth().currentUser ? <div className="desc">{firebase.auth().currentUser.email} </div> : ""}
+          {firebase.auth().currentUser? 
+            <div className="desc">
+              {firebase.auth().currentUser.email}
+            </div>
+          : ""}
           </div>
         </div>
 

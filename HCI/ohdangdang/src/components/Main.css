@@ -131,6 +131,12 @@ a {
   margin-bottom: 40px;
 }
 
+.about {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
 /* profile 부분 */
 .signInForm {
   position: relative;
@@ -146,7 +152,8 @@ a {
 
 .signInForm h4 {
   width: 100vw;
-  height: 40px;
+  margin-top: 10px;
+  height: 50px;
   font-style: normal;
   font-weight: 800;
   font-size: 36px;
@@ -202,12 +209,7 @@ a {
 }
 
 .Profile .thumb {
-  height: 200px;
-  width: 200px;
-  background-image: url("https://doodleipsum.com/600?shape=circle&bg=ceebff");
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
+  width: 30%;
   margin-bottom: 20px;
 }
 
