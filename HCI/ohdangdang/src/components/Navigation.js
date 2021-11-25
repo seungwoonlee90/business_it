@@ -11,8 +11,11 @@ function Navigation() {
         <Link to="/about" className="nav-icon">
           <span className="material-icons">pets</span>
         </Link>
+        <Link to="/daily" className="nav-icon">
+          <span className="material-icons">event_available</span>
+        </Link>
         <Link to="/signin" className="nav-icon">
-          <span className="material-icons">account_circle</span>
+          <span className="material-icons">person</span>
         </Link>
       </nav>
     </>

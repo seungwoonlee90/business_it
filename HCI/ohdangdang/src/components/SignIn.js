@@ -4,7 +4,7 @@ import initFirebase from "../fbBase";
 import firebase from "firebase/compat/app"
 import "firebase/compat/auth"
 import Profile from "./Profile";
-import dog from "../what.png";
+import dog from "../fire.png";
 
 
 initFirebase()

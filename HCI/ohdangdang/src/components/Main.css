@@ -136,12 +136,20 @@ a {
   padding: 10px 0 0 10px;
 }
 
+.list .item div:nth-child(1) {
+  border-radius: 10px 10px 0px 0px;
+}
+
 .list .item div:nth-child(2) {
   background: url('https://mdl.artvee.com/sftb/703621an.jpg');
   background-size: cover;
   background-position: center;
   font-size: 20px;
   height: 600%;
+}
+
+.list .item div:nth-child(3) {
+  border-radius: 0px 0px 10px 10px;
 }
 
 .volume {
@@ -184,7 +192,7 @@ a {
   width: 330px;
   height: 56px;
   font-size: 15px;
-  border-radius: 16px;
+  border-radius: 10px;
   padding-left: 10px;
   margin-bottom: 15px;
   display: block;
@@ -194,11 +202,11 @@ a {
   padding: 16px;
   width: 330px;
   height: 60px;
-  background-color: #333d79;
-  color: #faebef;
+  background-color: #feca57;
+  color: #fff;
   font-weight: 600;
   font-size: large;
-  border-radius: 16px;
+  border-radius: 10px;
   margin-bottom: 15px;
 }
 
@@ -207,6 +215,7 @@ a {
   height: 60px;
   margin-left: auto;
   margin-right: auto;
+  font-size: 14px;
   top: 350px;
 }
 
@@ -263,7 +272,7 @@ a {
 }
 
 .gnb .nav-icon {
-  color: #feca57;
+  color: #ff9f43;
 }
 
 .gnb span {
@@ -279,11 +288,11 @@ a {
   padding: 16px;
   width: 330px;
   height: 60px;
-  background-color: #333d79;
+  background-color: #feca57;
   color: #faebef;
   font-weight: 600;
   font-size: large;
-  border-radius: 16px;
+  border-radius: 10px;
   margin-bottom: 15px;
 }
 
@@ -311,66 +320,4 @@ a {
   to {
     transform: rotate(0deg);
   }
-}
-
-/* Montly */
-.monthly {
-  height: 100vh;
-  width: 100vw;
-  font-size: 1.5vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.monthly .control {
-  display: flex;
-  margin-bottom: 50px;
-}
-.monthly table {
-  display: flex;
-  width: 80vw;
-  height: 80vh;
-}
-.monthly table tbody {
-  display: flex;
-  flex-direction: column;
-}
-.monthly tr {
-  display: flex;
-  flex-direction: row;
-}
-.monthly td {
-  display: flex;
-  border: 1px solid gray;
-  width: 12vw;
-  height: 8vh;
-}
-.monthly td span {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.mbti {
-  position: absolute;
-  top: 2vh;
-  height: 100vh;
-  width: 100vw;
-  font-weight: 800;
-  font-size: 34px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 2vh;
-}
-
-.mbti div {
-  font-size: 20px;
-  text-align: center;
-}
-
-.mbti .question {
-  margin-top: 20px;
 }
