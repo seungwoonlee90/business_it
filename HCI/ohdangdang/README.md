@@ -1,4 +1,5 @@
-## @HCI Teamproject 2조
+![header](https://capsule-render.vercel.app/api?type=waving&&color=auto&height=200&section=header&text=OH!DangDang&fontSize=60)
 
 [Oh!DANGDANG](https://seungwoonlee90.github.io/business_it/#/)
-- 현재 서비스 중인 메인화면의 강아지는 서울동물복지지원센터 입양대기동물 현황입니다.
+- 국민대학교 BIT전문대학원 2021 2학기 @HCI 2조 팀프로젝트
+- 기술스택 : Next.js, React, Firebase
