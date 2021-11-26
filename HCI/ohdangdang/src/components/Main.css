@@ -321,3 +321,28 @@ a {
     transform: rotate(0deg);
   }
 }
+
+.mbti {
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10vh
+}
+
+.mbti button {
+  padding: 16px;
+  width: 330px;
+  height: 60px;
+  background-color: #feca57;
+  color: #faebef;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
