@@ -1,5 +1,5 @@
 import React from 'react';
-import main from '../rainbow.png';
+import main from '../img/rainbow.png';
 
 function Mbti() {
   return (

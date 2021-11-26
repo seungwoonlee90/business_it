@@ -1,7 +1,7 @@
 import React from "react";
 import initFirebase from "../fbBase";
 import firebase from 'firebase/compat/app'
-import profile from "../oww.png";
+import profile from "../img/oww.png";
 import "firebase/compat/auth"
 import "firebase/compat/firestore";
 

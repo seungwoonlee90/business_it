@@ -1,7 +1,7 @@
 import React from "react";
 import initFirebase from "../fbBase"
 import firebase from "firebase/compat/app"
-import main from '../main.png'
+import main from '../img/main.png'
 
 initFirebase()
 
