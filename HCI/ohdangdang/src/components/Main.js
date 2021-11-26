@@ -10,7 +10,7 @@ function Main() {
     <>
       <div className="mainForm">
         <div className="text-area">
-          <img src={main} alt="main" width="15%" />
+          <img src={main} alt="main" width="15%" onClick={()=>{window.location.hash="/mbti"}} />
           <div>
           <h1>OH! DangDang</h1>
           {firebase.auth().currentUser? 

@@ -15,7 +15,12 @@ function Mbti() {
         placeholder="🐶&nbsp; 반려동물의 나이를 입력해 주세요"
         required
       />
-      <div><button>Get Started</button></div>
+      <input
+        type="text"
+        placeholder="🐶&nbsp; 반려동물의 종류를 입력해 주세요"
+        required
+      />
+      <div><button onClick={()=>{window.location.hash="/mbti_question"}}>Get Started</button></div>
     </div>
   )
 }
