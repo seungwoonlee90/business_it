@@ -39,7 +39,7 @@ function SignIn() {
         <Profile />
       ) : (
         <div className="signInForm">
-          <img src={dog} alt="fire-dog" width="25%"/>
+          <img src={dog} alt="fire-dog" width="25%" onClick={()=>{window.location.hash="/about"}}/>
           <h4>Log In</h4>
           <form>
             <input
@@ -60,7 +60,7 @@ function SignIn() {
           </form>
           <p className="signUp">
             You are new?
-            <Link to="/signup">&nbsp; Create new ✨</Link>
+            <Link to="/signup">&nbsp; Create new ✨</Link><br />
           </p>
         </div>
       )}
