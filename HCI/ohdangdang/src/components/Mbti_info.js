@@ -17,7 +17,7 @@ function Mbti() {
       />
       <input
         type="text"
-        placeholder="🐶&nbsp; 반려동물의 종류를 입력해 주세요"
+        placeholder="🐶&nbsp; 반려동물의 품종을 입력해 주세요"
         required
       />
       <div><button onClick={()=>{window.location.hash="/mbti_question"}}>Get Started</button></div>

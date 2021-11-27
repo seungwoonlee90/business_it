@@ -10,6 +10,7 @@ import About from "./components/About";
 import Mbti from "./components/Mbti";
 import MbtiInfo from "./components/Mbti_info";
 import MbtiQuestion from "./components/Mbti_questions";
+import Result from "./components/Result";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route path="/mbti_question">
             <MbtiQuestion />
+          </Route>
+          <Route path="/result">
+            <Result />
           </Route>
           <Navigation />
         </div>
