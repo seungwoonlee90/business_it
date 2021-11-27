@@ -8,7 +8,7 @@ function Navigation() {
         <Link to="/" className="nav-icon">
           <span className="material-icons">home</span>
         </Link>
-        <Link to="/about" className="nav-icon">
+        <Link to="/upload" className="nav-icon">
           <span className="material-icons">pets</span>
         </Link>
         <Link to="/daily" className="nav-icon">
