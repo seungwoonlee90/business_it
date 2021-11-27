@@ -8,12 +8,12 @@ import bing from '../img/bing.png'
 
 function Question() {
   let pageNum = 0;
-  let section = document.getElementsByTagName("section");
-  let totalNum = section.length;
   let answer = [];
   let history = useHistory();
-
+  
   function back(e) {
+    let section = document.getElementsByTagName("section");
+    // let totalNum = section.length;
     e.preventDefault();
     if(pageNum > 0){
       pageNum --;
@@ -23,10 +23,11 @@ function Question() {
       behavior: "auto",
     })
     answer.pop();
-    console.log(answer)
   }
 
   function pageChange() {
+    let section = document.getElementsByTagName("section");
+    let totalNum = section.length;
     if(pageNum < totalNum-1){
       pageNum ++;
     }

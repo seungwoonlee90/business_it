@@ -443,3 +443,8 @@ a {
   border-radius: 10px;
   margin-bottom: 15px;
 }
+
+.mbti .result-desc {
+  width: 80%;
+  font-size: 18px;
+}

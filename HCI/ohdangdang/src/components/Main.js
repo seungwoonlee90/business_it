@@ -10,7 +10,6 @@ function Main() {
     .get()
     .then((res) => {
       res.forEach((doc)=>{
-        console.log(doc.data())
         let template = document.createElement("li");
         template.innerHTML = `<div>${doc.data().name}</div><div>${doc.data().date.toDate().toDateString()}</div><img src=${doc.data().img} alt="itemImg" /><div>${doc.data().desc}</div>`;
         template.className = "item"
