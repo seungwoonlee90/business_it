@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import "./components/Main.css";
 import Navigation from "./components/Navigation";
 import Main from "./components/Main";
+import Detail from "./components/Detail";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/Signup";
 import Upload from "./components/Upload";
@@ -21,6 +22,9 @@ function App() {
         <div id="App">
           <Route exact path="/">
             <Main />
+          </Route>
+          <Route exact path="/detail">
+            <Detail />
           </Route>
           <Route path="/signin">
             <SignIn />

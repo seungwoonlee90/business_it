@@ -1,11 +1,25 @@
 import React from "react";
-import initFirebase from "../fbBase"
 import firebase from "firebase/compat/app"
 import main from '../img/main.png'
 
-initFirebase()
 
 function Main() {
+
+  firebase.firestore()
+    .collection("product")
+    .get()
+    .then((res) => {
+      res.forEach((doc)=>{
+        console.log(doc.data())
+        let template = document.createElement("li");
+        template.innerHTML = `<div>${doc.data().name}</div><div>${doc.data().date.toDate().toDateString()}</div><img src=${doc.data().img} alt="itemImg" /><div>${doc.data().desc}</div>`;
+        template.className = "item"
+        template.onclick = function (){window.location.hash=`/detail?id=${doc.id}`};
+        document.querySelector(".list").appendChild(template)
+      })
+    });
+
+
   return (
     <>
       <div className="mainForm">
@@ -19,29 +33,10 @@ function Main() {
             </div>
           : ""}
           </div>
+          <span className="material-icons filter">filter_alt</span>
         </div>
 
         <ul className="list">
-          <li className="item">
-            <div>사용자 정보</div>
-            <div></div>
-            <div>오늘도 해피가 간식달라는 눈빛을 발사한다... +_+!</div>
-          </li>
-          <li className="item">
-            <div>사용자 정보</div>
-            <div></div>
-            <div>오늘도 해피가 간식달라는 눈빛을 발사한다... +_+!</div>
-          </li>
-          <li className="item">
-            <div>사용자 정보</div>
-            <div></div>
-            <div>오늘도 해피가 간식달라는 눈빛을 발사한다... +_+!</div>
-          </li>
-          <li className="item">
-            <div>사용자 정보</div>
-            <div></div>
-            <div>오늘도 해피가 간식달라는 눈빛을 발사한다... +_+!</div>
-          </li>
         </ul>
       </div>
     </>

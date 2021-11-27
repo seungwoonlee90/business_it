@@ -105,8 +105,13 @@ a {
   margin-left: 10px
 }
 
-/* Main 부분 */
+.filter {
+  margin-left: 80px;
+  font-size: 30px;
+  right: 0;
+}
 
+/* Main 부분 */
 .list {
   font-size: 0;
   display: grid;
@@ -117,7 +122,6 @@ a {
 }
 
 .list .item {
-  /* border: 1px solid white; */
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.20);
   border-radius: 10px;
   display: flex;
@@ -138,18 +142,22 @@ a {
 
 .list .item div:nth-child(1) {
   border-radius: 10px 10px 0px 0px;
+  margin-bottom: 0;
+  height: 30%;
 }
 
 .list .item div:nth-child(2) {
-  background: url('https://mdl.artvee.com/sftb/703621an.jpg');
-  background-size: cover;
-  background-position: center;
-  font-size: 20px;
-  height: 600%;
+  padding-top: 0;
+  height: 30%;
 }
 
-.list .item div:nth-child(3) {
+.list .item img {
+  width: 100%;
+}
+
+.list .item div:nth-child(4) {
   border-radius: 0px 0px 10px 10px;
+  height: 50%;
 }
 
 .volume {
@@ -161,6 +169,48 @@ a {
   align-items: flex-start;
 }
 
+
+/* detail */
+.detail {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #feca57;
+}
+
+.detail-info {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  top: -10px;
+  border-radius: 10px 10px 0 0;
+  color: black;
+}
+
+.detail-sub {
+  margin-top: 5vh;
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.detail-sub .title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #848484;
+  width: 90%;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  padding-bottom: 10px;
+  color: #848484;
+}
 
 /* profile 부분 */
 .signInForm {
