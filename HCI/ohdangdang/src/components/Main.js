@@ -33,7 +33,10 @@ function Main() {
             </div>
           : ""}
           </div>
-          <span className="material-icons filter">filter_alt</span>
+          <span className="material-icons filter" onClick={(e)=>{
+            e.preventDefault();
+            alert('개발중입니다!, 조금만 기다려주세요...')
+          }}>filter_alt</span>
         </div>
 
         <ul className="list">
