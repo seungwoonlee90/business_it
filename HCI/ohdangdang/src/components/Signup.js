@@ -1,22 +1,28 @@
 import React from "react";
-import firebase_ from "../fbBase";
+import firebase from "firebase/compat/app"
+import "firebase/compat/auth"
 
 function Signup() {
   let LogIn = async (e) => {
     e.preventDefault();
-    let username = document.querySelectorAll(".signin-inner")[0].value;
-    let mbti = document.querySelectorAll(".signin-inner")[1].value;
-    let email = document.querySelectorAll(".signin-inner")[2].value;
-    let password = document.querySelectorAll(".signin-inner")[3].value;
-    await firebase_.auth
+    let username = document.querySelectorAll(".signup-inner")[0].value;
+    let email = document.querySelectorAll(".signup-inner")[1].value;
+    let password = document.querySelectorAll(".signup-inner")[2].value;
+    let dogname = document.querySelectorAll(".signup-inner")[3].value;
+    let dogdate = document.querySelectorAll(".signup-inner")[4].value;
+    let mbti = document.querySelectorAll(".signup-inner")[5].value;
+    
+    await firebase.auth()
       .createUserWithEmailAndPassword(email, password)
       .then((result) => {
         let userInfo = {
           name: username,
           email: email,
+          dogname: dogname,
+          dongdate: dogdate,
           mbti: mbti,
         };
-        firebase_.db.collection("user").doc(result.user.uid).set({ userInfo });
+        firebase.firestore().collection("user").doc(result.user.uid).set({ userInfo });
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -24,40 +30,54 @@ function Signup() {
         console.log(errorCode);
         alert(errorMessage);
       });
-    firebase_.auth.onAuthStateChanged(function (user) {
+    firebase.auth().onAuthStateChanged(function (user) {
       window.location.hash = "/";
     });
   };
 
   return (
-    <div className="signInForm">
+    <div className="signUpForm">
       <h4>Sign Up</h4>
-      <form>
+      <form className="signUp">
+        <p>유저 정보 (필수사항)</p>
         <input
-          className="signin-inner"
+          className="signup-inner"
           type="text"
           placeholder="👀&nbsp; username"
           required
         />
         <input
-          className="signin-inner"
-          type="text"
-          placeholder="🌈&nbsp; mbti"
-          style={{ textTransform: "uppercase" }}
-          required
-        />
-        <input
-          className="signin-inner"
+          className="signup-inner"
           type="email"
           placeholder="💌&nbsp; email"
           required
         />
         <input
-          className="signin-inner"
+          className="signup-inner"
           type="password"
           placeholder="🔑&nbsp; password"
           required
         />
+        <input
+          className="signup-inner"
+          type="text"
+          placeholder="👀&nbsp; 반려동물의 이름은 ?"
+          required
+        />
+        <input
+          className="signup-inner"
+          type="date"
+          placeholder="👀&nbsp; 반려동물을 처음 만난날은 ?"
+          required
+        />
+        <input
+          className="signup-inner"
+          type="text"
+          placeholder="🌈&nbsp; mbti"
+          style={{ textTransform: "uppercase" }}
+          required
+        />
+
         <button onClick={LogIn} className="signIn">
           Sign Up
         </button>

@@ -13,7 +13,9 @@ function Upload() {
     .get()
     .then((res) => {
       let name = res.data().userInfo.name;
+      let dogname = res.data().userInfo.dogname;
       document.querySelector(".name").innerText = name;
+      document.querySelector(".dogname").innerText = dogname;
     });
   } catch {
     window.location.hash="/signin"
@@ -58,7 +60,7 @@ function Upload() {
   return (
     <div className="upload">
       <input id="image" type="file" className="img" />
-      <h4>해피와 오늘의 기록 남기기!</h4>
+      <h4><p className="dogname" style={{"display":"inline", "color":"black"}}></p>와 오늘의 기록 남기기!</h4>
       <div className="name"></div>
         <p>누구와</p>
       <form>

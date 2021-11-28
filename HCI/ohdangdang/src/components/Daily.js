@@ -14,14 +14,16 @@ function daily() {
     .get()
     .then((res) => {
       let name = res.data().userInfo.name;
+      let dogname = res.data().userInfo.dogname;
       document.querySelector(".name").innerText = name;
+      document.querySelector(".dogname").innerText = dogname;
     });
   } catch {
     window.location.hash="/signin"
   }
   return(
     <div className="daily-main">
-      <div className="title"><p className="name" style={{"display":"inline", "color":"black"}}></p>님&nbsp; <p style={{"fontSize":"30px", "color":"black", "display":"inline"}}>해피</p>&nbsp; 의<br /> 오늘 하루는 어땠나요 ?</div>
+      <div className="title"><p className="name" style={{"display":"inline", "color":"black"}}></p>님&nbsp;<p style={{"fontSize":"30px", "color":"black", "display":"inline"}}><p className="dogname" style={{"display":"inline", "color":"black"}}></p></p>&nbsp;의<br /> 오늘 하루는 어땠나요 ?</div>
       <div className="icon">
         <img src={icon_1} alt="icon_1" width="40%" />
       </div>

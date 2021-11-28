@@ -1,17 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import initFirebase from "../fbBase";
 import firebase from "firebase/compat/app"
 import "firebase/compat/auth"
 import Profile from "./Profile";
 import dog from "../img/fire.png";
 
-
-initFirebase()
-
 function SignIn() {
   let user = firebase.auth().currentUser;
-  console.log(user)
   let LogIn = async (e) => {
     e.preventDefault();
     let email = document.querySelectorAll(".signin-inner")[0].value;
@@ -58,9 +53,9 @@ function SignIn() {
               Sign In
             </button>
           </form>
-          <p className="signUp">
+          <p>
             You are new?
-            <Link to="/signup">&nbsp; Create new ✨</Link><br />
+            <Link to="/signup" style={{"color":"red"}}>&nbsp; Create new ✨</Link><br />
           </p>
         </div>
       )}
