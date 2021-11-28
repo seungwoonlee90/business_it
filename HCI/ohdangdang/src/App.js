@@ -7,6 +7,8 @@ import Detail from "./components/Detail";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/Signup";
 import Upload from "./components/Upload";
+import Daily from "./components/Daily";
+import Calander from "./components/Calander";
 import About from "./components/About";
 import Mbti from "./components/Mbti";
 import MbtiInfo from "./components/Mbti_info";
@@ -34,6 +36,12 @@ function App() {
           </Route>
           <Route path="/upload">
             <Upload />
+          </Route>
+          <Route path="/daily">
+            <Daily />
+          </Route>
+          <Route path="/calander">
+            <Calander />
           </Route>
           <Route path="/about">
             <About />
