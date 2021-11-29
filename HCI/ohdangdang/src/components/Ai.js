@@ -48,42 +48,12 @@ function Ai() {
         <div>
           <button onClick={(e)=>{
             e.preventDefault();
-            pageChange()
+            window.location.hash="/"
           }}>오늘의 캘린더에 추가하기!</button>
           <button onClick={(e)=>{
             e.preventDefault();
-            pageChange()
+            window.location.hash="/"
           }}>다른 사진/영상으로 시도하기!</button>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div className="ai">
-        <div>Ai 분석 결과 화면</div>
-        <div style={{"fontSize" : "15px"}}>(2/5)</div>
-        <div className="question">주인이 없을 때, <br /> 우리 반려동물은 ?</div>
-        <div>
-          <button onClick={(e)=>{
-            e.preventDefault();
-            pageChange()
-          }}>다시 시도하기!</button>
-          <button onClick={(e)=>{
-            e.preventDefault();
-            pageChange()
-          }}>댕댕이의 기분을 공유해주세요</button>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div className="ai">
-        <div>Ai 분석 exit 화면</div>
-        <div style={{"fontSize" : "15px"}}>(2/5)</div>
-        <div className="question">주인이 없을 때, <br /> 우리 반려동물은 ?</div>
-        <div>
-          <button onClick={(e)=>{
-            e.preventDefault();
-            pageChange()
-          }}>EXIT</button>
         </div>
       </div>
     </section>
