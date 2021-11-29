@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from "react-router";
+import { useLocation, useHistory } from "react-router";
 import main from "../img/main.png"
 import firebase from 'firebase/compat/app'
 import "firebase/compat/firestore";
@@ -7,6 +7,7 @@ import "firebase/compat/firestore";
 function Result () {
   let location = useLocation();
   let result = location.state.res;
+  let history = useHistory();
 
   firebase.firestore()
     .collection("mbti")
@@ -22,6 +23,15 @@ function Result () {
 
     });
 
+    function next(e) {
+      e.preventDefault();
+      let res = result
+      history.push({
+        pathname: "/signup",
+        state: {res}
+      })
+    }
+
   return (
     <div className="mbti">
       <img src={main} alt="main" width="40%"/>
@@ -35,7 +45,7 @@ function Result () {
         
       </div>
       <div>
-        <button onClick={()=>{window.location.hash="/signup"}}>비슷한 친구들 만나러 가기!</button>
+        <button onClick={next}>비슷한 친구들 만나러 가기!</button>
         <button onClick={()=>{window.location.hash="/mbti"}}>다시하기</button>
       </div>
     </div>

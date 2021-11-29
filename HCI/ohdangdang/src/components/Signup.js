@@ -1,8 +1,14 @@
 import React from "react";
+import { useLocation } from "react-router";
 import firebase from "firebase/compat/app"
 import "firebase/compat/auth"
 
 function Signup() {
+
+  let location = useLocation();
+  let result = location.state.res;
+  console.log(result);
+
   let LogIn = async (e) => {
     e.preventDefault();
     let username = document.querySelectorAll(".signup-inner")[0].value;
@@ -73,7 +79,8 @@ function Signup() {
         <input
           className="signup-inner"
           type="text"
-          placeholder="🌈&nbsp; mbti"
+          value={result}
+          placeholder={result}
           style={{ textTransform: "uppercase" }}
           required
         />
