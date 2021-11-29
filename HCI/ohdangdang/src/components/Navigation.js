@@ -11,6 +11,9 @@ function Navigation() {
         <Link to="/daily" className="nav-icon">
           <span className="material-icons">pets</span>
         </Link>
+        <Link to="/ai" className="nav-icon">
+          <span className="material-icons">auto_awesome</span>
+        </Link>
         <Link to="/calander" className="nav-icon">
           <span className="material-icons">event_available</span>
         </Link>

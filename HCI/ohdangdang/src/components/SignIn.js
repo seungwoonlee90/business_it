@@ -55,7 +55,7 @@ function SignIn() {
           </form>
           <p>
             You are new?
-            <Link to="/signup" style={{"color":"red"}}>&nbsp; Create new ✨</Link><br />
+            <Link to="/mbti" style={{"color":"red"}}>&nbsp; Create new ✨</Link><br />
           </p>
         </div>
       )}
