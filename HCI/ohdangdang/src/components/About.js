@@ -2,7 +2,7 @@ import React from "react";
 function About() {
   return ( 
       <div className="about">
-        <div className="volume">ver 0.8</div>
+        <div className="volume">ver 1.0</div>
         <div className="title">
           @HCI 2조 <br /> Team Project
         </div>

@@ -2,4 +2,4 @@
 
 [Oh!DANGDANG](https://seungwoonlee90.github.io/business_it/#/)
 - 국민대학교 BIT전문대학원 2021 2학기 @HCI 2조 팀프로젝트
-- 기술스택 : Next.js, React, Firebase
+- 기술스택 : React, Firebase
