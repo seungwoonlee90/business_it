@@ -79,7 +79,7 @@ function Upload() {
         <label className="box-radio-input"><input type="radio" name="cp_item3" value="집" /><span>집</span></label>
         <label className="box-radio-input"><input type="radio" name="cp_item3" value="동네" /><span>동네</span></label>
         <label className="box-radio-input"><input type="radio" name="cp_item3" value="야외" /><span>야외</span></label>
-        <label className="box-radio-input"><input type="radio" name="cp_item3" value="애견카페" /><span>애견카페</span></label>
+        <label className="box-radio-input"><input type="radio" name="cp_item3" value="애견카페" /><span>카페</span></label>
         <label className="box-radio-input"><input type="radio" name="cp_item3" value="기타" /><span>기타</span></label>
       </form>
         <p>무엇을</p>

@@ -226,6 +226,28 @@ a {
 }
 
 
+.tag {
+  margin-top: 20px;
+  display: flex;
+  padding-bottom: 25px;
+  width: 90%;
+  border-bottom: 1px solid dimgray
+}
+
+.tag-sub {
+  margin-right: 10px;
+  width: 60px;
+  border: 2px solid dimgray;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ff9f43;
+}
+
+.comment {
+  margin-top: 10px;
+}
+
+
 /* daily */
 .daily-main {
   display: flex;
@@ -484,7 +506,8 @@ a {
 .upload .name {
   font-size: 20px;
   border-bottom: 1px solid dimgray;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  margin-top: 12px;
 }
 
 .upload .content {
